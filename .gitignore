@@ -1,0 +1,14 @@
+# Release files go on the GitHub release, not in the repository
+*.cia
+*.3dsx
+*.exe
+*.dll
+# QR codes for the local test server (192.168.x.x)
+pelican-cia-qr.png
+pelican-3dsx-qr.png
+# Older guides, replaced by README.md
+Browser-Converter-README.md
+PC-Converter-Guide.md
+# The Reddit post is pasted into Reddit, not published here
+Reddit-Release-Post.md
+*.zip
