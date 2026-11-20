@@ -13,6 +13,7 @@
   <a href="#working-now">Features</a> ·
   <a href="#controls">Controls</a> ·
   <a href="#getting-started">Setup</a> ·
+  <a href="#updating">Update</a> ·
   <a href="#logs-and-bug-reports">Report a bug</a>
 </p>
 
@@ -75,13 +76,31 @@ You need a 3DS with custom firmware (Luma3DS). If you don't have it yet, follow
 </tr>
 </table>
 
-### Updates
+<a id="updating"></a>
+### Updating
 
-Pelican checks for a new release each time it starts (when the 3DS is online).
-If there is one, the title menu offers to download and install it. Choose
-**OK**, and Pelican closes when it's done. Start it again to play the new version.
+Your converted game files stay on the SD card (`3ds/Pelican/`), so updating
+never means converting again unless the title menu asks for it. Pick any of
+these:
+
+| Way | How |
+| --- | --- |
+| **In Pelican** (easiest) | Pelican checks for a new release each time it starts while the 3DS is online. When there is one, the title menu offers it: choose **OK**. It downloads and installs it, then closes. Start it again and the corner of the title menu shows the new version. This works for both the HOME Menu install (`.cia`) and the Homebrew Launcher copy (`.3dsx`). |
+| **FBI, scan the QR code** | Do the same as the first install (above). The QR code always links to the newest `pelican.cia`, and FBI installs it over the old one. |
+| **FBI, from the SD card** | Download `pelican.cia` from [Releases](../../releases), copy it anywhere on the SD card, then in FBI choose **SD**, find the file, and pick **Install CIA**. |
+| **Homebrew Launcher** | Download `pelican.3dsx` from [Releases](../../releases) and replace the old one in `sd:/3ds/Pelican/`. |
+
 If a new version needs some game files converted again, the title menu offers
 to open the converter.
+
+> [!NOTE]
+> **Coming from 0.0.1 with the HOME Menu install?** Pelican 0.0.2 has a new
+> title ID (0.0.1's clashed with another homebrew app), so it installs as a
+> **second** Pelican instead of replacing the old one. After 0.0.2 is
+> installed, delete the old one: **System Settings > Data Management >
+> Nintendo 3DS > Software**, pick the older *Pelican*, then **Delete** (or use
+> FBI > **Titles**). Nothing you need is lost, because your converted files and
+> logs are on the SD card, not in the title. The `.3dsx` isn't affected.
 
 <a id="gameplay"></a>
 <h2 align="center"><img src="images/scrolls/gameplay.png" alt="Gameplay" height="72"></h2>
@@ -128,6 +147,9 @@ to open the converter.
 - ✅ Hold **Y** to keep swinging, like holding the button on PC
 - ✅ Bottom-screen HUD: hotbar, held item details, clock, date, money, energy and zoom
 - ✅ Start menu with the Inventory page: move, stack, organize, trash and drop items
+- 🆕 **Crops**: plant seeds and fertilizer on tilled soil, water them, and watch them grow overnight. Crops die out of season, and crows can eat them. Harvest by hand (the crop is lifted over your head) or with the scythe, with PC's quality and experience.
+- 🆕 **Shipping bin**: hold an item and press **Y** at the bin to throw the stack in. You're paid overnight at PC's prices.
+- 🆕 Held items show over your farmer's head, for every player
 
 **Co-op** (3DS as a farmhand)
 - ✅ Finds farms on your network by name, or joins by IP address
@@ -144,10 +166,9 @@ to open the converter.
 
 In roughly this order:
 
-1. 🌱 **Crops**: planting, growing and harvesting
-2. 📦 **Shipping bin**: selling, the overnight payout and the earnings screen
-3. 💾 **Saving and loading**, including PC saves
-4. 🏠 **Interiors**: other buildings, their lights and night tiles
+1. 📦 **Shipping bin screens**: the bin's item menu and the end-of-night earnings screen
+2. 💾 **Saving and loading**, including PC saves
+3. 🏠 **Interiors**: other buildings, their lights and night tiles
 
 After that:
 - 🧑‍🌾 Villagers, dialogue, events and shops
@@ -167,8 +188,8 @@ After that:
 | --- | --- |
 | Circle Pad / D-pad | Move (you run by default) |
 | **B** (hold) | Walk |
-| **A** | Interact: doors, beds, the gift box, the fireplace |
-| **Y** | Use the held tool. Hold it to keep swinging, or to charge an upgraded tool. |
+| **A** | Interact: doors, beds, the gift box, the fireplace. Harvest a ripe crop, or plant the held seeds. |
+| **Y** | Use the held tool. Hold it to keep swinging, or to charge an upgraded tool. Holding seeds: plant them. At the shipping bin: throw the held item in. A ripe crop in front of you is picked first. |
 | **L / R** | Previous / next item in the toolbar |
 | **Start** | Open the menu (tabs on the touch screen) |
 | **ZR** *(New 3DS)* | Cycle the zoom 1x / 2x / 3x (on any model you can also tap the zoom button on the HUD) |
@@ -374,8 +395,8 @@ Windows). After converting, you can join hosts on PC, iOS or Android.
 
 <details><summary><b>Can I keep my progress?</b></summary>
 
-Not yet in single player. Saving comes after crops and the shipping bin. In co-op,
-the host saves the farm as usual, including your farmhand.
+Not yet in single player. Saving is coming next. In co-op, the host saves the
+farm as usual, including your farmhand.
 </details>
 
 <details><summary><b>Does it run on an original 3DS?</b></summary>
@@ -387,6 +408,22 @@ speed. Please report how it runs on yours.
 <details><summary><b>Does it work with mods?</b></summary>
 
 Not yet. Convert an unmodded Content folder. Mod support is a long-term goal.
+</details>
+
+<a id="title-id"></a>
+<details><summary><b>For homebrew developers: Pelican's title ID</b></summary>
+
+So other apps don't clash with it, the HOME Menu install uses:
+
+| | |
+| --- | --- |
+| Title ID | `000400000F6C2100` |
+| Unique ID | `0xF6C21` |
+| Product code | `CTR-P-PLCN` |
+
+These are used from 0.0.2 alpha on. 0.0.1 alpha used unique ID `0xF7A3C`
+(title ID `000400000F7A3C00`), which another homebrew app already used, so
+please don't count on that one.
 </details>
 
 <a id="credits"></a>
