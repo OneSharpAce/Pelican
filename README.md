@@ -18,7 +18,8 @@
 </p>
 
 > [!IMPORTANT]
-> **Early alpha.** Pelican is a work in progress, and there's no saving yet. You
+> **Early alpha.** Pelican is a work in progress. It saves every night in PC's own
+> format, and loads its own saves (loading PC saves comes later). You
 > need your own purchased **PC copy of Stardew Valley 1.6.15**. Pelican doesn't
 > include any game files. You convert your own copy, and it stays on your SD card.
 
@@ -113,7 +114,23 @@ to open the converter.
 <table>
 <tr>
 <td align="center"><img src="images/shots/title.png" width="300" alt="Title screen"><br><sub>The title screen and its menu on the touch screen</sub></td>
-<td align="center"><img src="images/shots/farm-morning.png" width="300" alt="The farm in the morning"><br><sub>Your farm, with the HUD on the bottom screen</sub></td>
+<td align="center"><img src="images/shots/hud.png" width="300" alt="The new HUD"><br><sub>The clock and bars on top; the hotbar, item details and quick buttons below</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="images/shots/quick-tabs.png" width="300" alt="Quick buttons"><br><sub>Hold a quick button to choose its menu tab</sub></td>
+<td align="center"><img src="images/shots/load.png" width="300" alt="Load menu"><br><sub>Load your saves</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="images/shots/skills-farmer.png" width="300" alt="Skills tab"><br><sub>The Skills tab: your farmer and equipment</sub></td>
+<td align="center"><img src="images/shots/wardrobe.png" width="300" alt="Choosing what to wear"><br><sub>Choosing what to wear</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="images/shots/villager.png" width="300" alt="A villager's page"><br><sub>Villagers' pages from the Social tab</sub></td>
+<td align="center"><img src="images/shots/gift-log.png" width="300" alt="Gift log"><br><sub>The gift log</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="images/shots/options.png" width="300" alt="Options"><br><sub>The Options tab, its help on the top screen</sub></td>
+<td align="center"><img src="images/shots/shipping.png" width="300" alt="Shipping screen"><br><sub>The end-of-day shipping screen</sub></td>
 </tr>
 <tr>
 <td align="center"><img src="images/shots/tools.png" width="300" alt="Using tools"><br><sub>Chopping, mining, hoeing and watering</sub></td>
@@ -122,10 +139,6 @@ to open the converter.
 <tr>
 <td align="center"><img src="images/shots/rain.png" width="300" alt="A rainy day"><br><sub>Weather, with rain at every zoom level</sub></td>
 <td align="center"><img src="images/shots/coop.png" width="300" alt="Co-op with a PC host"><br><sub>A 3DS farmhand on a PC host's farm</sub></td>
-</tr>
-<tr>
-<td align="center"><img src="images/shots/inventory.png" width="300" alt="Inventory"><br><sub>The Start menu's inventory page</sub></td>
-<td align="center"><img src="images/shots/creator.png" width="300" alt="Character creation"><br><sub>Character creation over both screens</sub></td>
 </tr>
 </table>
 
@@ -145,11 +158,16 @@ to open the converter.
 - ✅ Trees (felled, stumps, saplings), stones, boulders, logs, bushes, weeds and grass
 - ✅ Drops fly to you and go into your inventory
 - ✅ Hold **Y** to keep swinging, like holding the button on PC
-- ✅ Bottom-screen HUD: hotbar, held item details, clock, date, money, energy and zoom
 - ✅ Start menu with the Inventory page: move, stack, organize, trash and drop items
-- 🆕 **Crops**: plant seeds and fertilizer on tilled soil, water them, and watch them grow overnight. Crops die out of season, and crows can eat them. Harvest by hand (the crop is lifted over your head) or with the scythe, with PC's quality and experience.
-- 🆕 **Shipping bin**: hold an item and press **Y** at the bin to throw the stack in. You're paid overnight at PC's prices.
-- 🆕 Held items show over your farmer's head, for every player
+- 🆕 **Saving**: every night, in PC's own format (copy the save folder to PC and keep playing there), with PC's save screen
+- 🆕 **Load menu** for Pelican's saves (only saves made by Pelican load for now; PC saves come later)
+- 🆕 **New HUD**: the clock, energy and health on the top screen; the hotbar, item details and four quick buttons (hold one to pick its tab) on the touch screen
+- 🆕 **Start menu tabs**: Skills (your farmer, equipment, skills and progress), Social with villagers' pages and gift logs, Options (Auto Run, tool hit location, volumes, zoom and more) and Exit
+- 🆕 **Chests and the fridge**, the shipping bin's menu, and the end-of-day shipping screen
+- 🆕 Forage across the seasons, bush berries and tea, artifact spots, casks, green rain, tree drops, and building doors, wallpaper, flooring and paint
+- ✅ **Crops**: plant seeds and fertilizer on tilled soil, water them, and watch them grow overnight. Crops die out of season, and crows can eat them. Harvest by hand (the crop is lifted over your head) or with the scythe, with PC's quality and experience.
+- ✅ **Shipping bin**: hold an item and press **Y** at the bin to throw the stack in. You're paid overnight at PC's prices.
+- ✅ Held items show over your farmer's head, for every player
 
 **Co-op** (3DS as a farmhand)
 - ✅ Finds farms on your network by name, or joins by IP address
@@ -166,9 +184,8 @@ to open the converter.
 
 In roughly this order:
 
-1. 📦 **Shipping bin screens**: the bin's item menu and the end-of-night earnings screen
-2. 💾 **Saving and loading**, including PC saves
-3. 🏠 **Interiors**: other buildings, their lights and night tiles
+1. 💾 **Loading PC saves** (and Pelican saves played on PC)
+2. 🏠 **Interiors**: other buildings, their lights and night tiles
 
 After that:
 - 🧑‍🌾 Villagers, dialogue, events and shops
@@ -186,15 +203,15 @@ After that:
 
 | Button | In the game |
 | --- | --- |
-| Circle Pad / D-pad | Move (you run by default) |
-| **B** (hold) | Walk |
+| Circle Pad | Move: push lightly to walk, all the way to run |
+| D-pad | Move: runs with Options > Auto Run on, walks with it off |
+| **B** (hold) | The other way: walk (or run) |
 | **A** | Interact: doors, beds, the gift box, the fireplace. Harvest a ripe crop, or plant the held seeds. |
 | **Y** | Use the held tool. Hold it to keep swinging, or to charge an upgraded tool. Holding seeds: plant them. At the shipping bin: throw the held item in. A ripe crop in front of you is picked first. |
 | **L / R** | Previous / next item in the toolbar |
 | **Start** | Open the menu (tabs on the touch screen) |
-| **ZR** *(New 3DS)* | Cycle the zoom 1x / 2x / 3x (on any model you can also tap the zoom button on the HUD) |
+| **ZR** *(New 3DS)* | Cycle the zoom 1x / 2x / 3x (on any model: Options > Zoom Level) |
 | **Touch screen** | Hotbar, item details (tap the item's name), zoom, menus |
-| Select | Debug overlay: frame rate and the held item (for testing) |
 | X | +1 hour (single player, for testing) |
 | ZL *(New 3DS)* | Toggle the fast CPU mode (for testing) |
 
@@ -395,7 +412,9 @@ Windows). After converting, you can join hosts on PC, iOS or Android.
 
 <details><summary><b>Can I keep my progress?</b></summary>
 
-Not yet in single player. Saving is coming next. In co-op, the host saves the
+Yes. Pelican saves every night (`3ds/pelican/Saves/`), and **Load** on the
+title screen goes back to it. The save is in PC's format too, so you can copy
+the folder to PC's `Saves` and keep playing there. In co-op, the host saves the
 farm as usual, including your farmhand.
 </details>
 
