@@ -11,11 +11,18 @@
   <a href="#download">Download</a> ·
   <a href="#gameplay">Gameplay</a> ·
   <a href="#working-now">Features</a> ·
+  <a href="#performance">Performance</a> ·
   <a href="#controls">Controls</a> ·
   <a href="#getting-started">Setup</a> ·
   <a href="#updating">Update</a> ·
   <a href="#logs-and-bug-reports">Report a bug</a>
 </p>
+
+> [!TIP]
+> **0.0.4 makes Pelican much faster on the original 3DS / 3DS XL / 2DS.** On a
+> big year-9 co-op farm the frame rate went from 4-8 fps to 30, and towns now run
+> at 60. New 3DS models hold close to 60 on the same farm. See
+> [Performance](#performance) for the numbers and the new **Options > System** settings.
 
 > [!IMPORTANT]
 > **Early alpha.** Pelican is a work in progress. It saves every night in PC's own
@@ -31,8 +38,9 @@ convert it from your PC copy. It isn't an emulator or a stream. The game logic
 follows PC version 1.6.15, and every difference from PC is recorded with its
 reason.
 
-- **Every 3DS model is supported.** The original 3DS / 3DS XL / 2DS are the
-  baseline, and New 3DS / New 3DS XL / New 2DS XL get extra speed where they can.
+- **Every 3DS model is supported, including the original 3DS / 3DS XL / 2DS.**
+  The original models are the baseline Pelican is built for, and New 3DS / New
+  3DS XL / New 2DS XL get extra speed where they can.
 - **It's designed for two screens.** The world is on top, and the HUD, hotbar
   and menus are on the touch screen.
 - **Co-op with other platforms works today.** A 3DS can join a farm hosted on
@@ -153,21 +161,27 @@ to open the converter.
 **On the farm** (single player and co-op)
 - ✅ The farm and the farmhouse with its furniture and the starter gift
 - ✅ Day and night, with lit windows, lamps and a working fireplace
+- ✅ The seasons: the maps change with them, and 🆕 so does the water (pink in fall, purple in winter, as on PC)
 - ✅ Sleeping, passing out at 2 AM, and a new day. The farm changes overnight, and rain and other weather arrive.
 - ✅ Hoe, watering can (refill it at water), axe, pickaxe, scythe and weapons
 - ✅ Trees (felled, stumps, saplings), stones, boulders, logs, bushes, weeds and grass
 - ✅ Drops fly to you and go into your inventory
 - ✅ Hold **Y** to keep swinging, like holding the button on PC
 - ✅ Start menu with the Inventory page: move, stack, organize, trash and drop items
-- 🆕 **Saving**: every night, in PC's own format (copy the save folder to PC and keep playing there), with PC's save screen
-- 🆕 **Load menu** for Pelican's saves (only saves made by Pelican load for now; PC saves come later)
-- 🆕 **New HUD**: the clock, energy and health on the top screen; the hotbar, item details and four quick buttons (hold one to pick its tab) on the touch screen
-- 🆕 **Start menu tabs**: Skills (your farmer, equipment, skills and progress), Social with villagers' pages and gift logs, Options (Auto Run, tool hit location, volumes, zoom and more) and Exit
-- 🆕 **Chests and the fridge**, the shipping bin's menu, and the end-of-day shipping screen
-- 🆕 Forage across the seasons, bush berries and tea, artifact spots, casks, green rain, tree drops, and building doors, wallpaper, flooring and paint
+- ✅ **Saving**: every night, in PC's own format (copy the save folder to PC and keep playing there), with PC's save screen
+- ✅ **Load menu** for Pelican's saves (only saves made by Pelican load for now; PC saves come later)
+- ✅ **New HUD**: the clock, energy and health on the top screen; the hotbar, item details and four quick buttons (hold one to pick its tab) on the touch screen
+- ✅ **Start menu tabs**: Skills (your farmer, equipment, skills and progress), Social with villagers' pages and gift logs, Options (Auto Run, tool hit location, volumes, zoom and more) and Exit, all usable with the buttons or the touch screen
+- ✅ **Chests and the fridge**, the shipping bin's menu, and the end-of-day shipping screen
+- ✅ Forage across the seasons, bush berries and tea, artifact spots, casks, green rain, tree drops, and building doors, wallpaper, flooring and paint
 - ✅ **Crops**: plant seeds and fertilizer on tilled soil, water them, and watch them grow overnight. Crops die out of season, and crows can eat them. Harvest by hand (the crop is lifted over your head) or with the scythe, with PC's quality and experience.
 - ✅ **Shipping bin**: hold an item and press **Y** at the bin to throw the stack in. You're paid overnight at PC's prices.
 - ✅ Held items show over your farmer's head, for every player
+
+**Performance and settings** 🆕
+- 🆕 **Big farms run much faster**, most of all on the original 3DS ([numbers below](#performance))
+- 🆕 **Options > System**: Frame Rate (60 or 30), Fast CPU (New 3DS), Fish Pond Shadows (1 to 10)
+- 🆕 A host repainting a building shows on your screen without slowing the game down
 
 **Co-op** (3DS as a farmhand)
 - ✅ Finds farms on your network by name, or joins by IP address
@@ -178,6 +192,42 @@ to open the converter.
 
 **Converting**
 - ✅ PC converter, browser converter over Wi-Fi, or converting on the console
+
+<a id="performance"></a>
+<h2 align="center"><img src="images/scrolls/performance.png" alt="Performance" height="72"></h2>
+
+0.0.4 is about speed on big farms, and most of all on the **original 3DS**. These
+were measured as a farmhand on a host's **year-9 farm** (62 buildings, 20 fish
+ponds, 194 trees, over 1,000 grass tufts), standing still for 30 seconds:
+
+| Where | Original 3DS speed, 0.0.3 | Original 3DS speed, 0.0.4 |
+| --- | --- | --- |
+| Bus Stop | 15 fps | **60 fps** |
+| Town | 45 fps or less | **58-60 fps** |
+| The big farm | 4-8 fps | **30 fps** |
+| The host repainting a building | a stutter on every colour change | **no stutter** (each repaint ~5 ms instead of ~55 ms) |
+
+On a **New 3DS / New 2DS XL** with Fast CPU on, the same farm went from 40-60 fps to **58-60 fps**.
+
+<sub>"Original 3DS speed" was measured on a New 2DS XL with Options > System > Fast CPU
+turned off, which runs the original 3DS's processor speed. If you own an original
+3DS, 3DS XL or 2DS, please [report](#logs-and-bug-reports) how it runs for you.</sub>
+
+**What was fixed:**
+- **Your health and skill stats** were looked up by searching your whole farmhand save (about 290 KB on an old farm) every frame. They're now read once.
+- **Trees, grass and crops** were all updated three times a frame, even standing still. Now only the trees and anything swaying are, as on PC.
+- **The processor and the graphics chip** took turns each frame. The game now updates while the last frame is still being drawn.
+- **Fish ponds** moved every fish and checked it against every other fish. The number of fish shadows is now a setting (below).
+- **Buildings:** any change to one (a repaint, a pond's fish) re-read all of them. Now only the one that changed is. Repainting also works out each colour once instead of once per pixel, with the same result as PC.
+
+**Options > System** (new):
+
+| Setting | What it does | Default |
+| --- | --- | --- |
+| **Frame Rate** | 60 or 30 frames a second. The game runs at PC's speed either way; 30 saves battery and is steadier on big farms. | 60 |
+| **Fast CPU** | New 3DS / New 2DS XL only: the faster processor. Off saves battery. (It was the ZL button before.) | On |
+| **Fish Pond Shadows** | How many fish shadows each pond shows, 1 to 10. PC shows one per fish (up to 10). Fewer keeps big farms faster. | 3 on the original 3DS, 10 on New models |
+| **Item Drops** | Coming later: draw one of each kind of dropped item instead of every one (you still pick up all of them). | All |
 
 <a id="planned"></a>
 <h2 align="center"><img src="images/scrolls/planned.png" alt="Planned" height="72"></h2>
@@ -191,8 +241,8 @@ After that:
 - 🧑‍🌾 Villagers, dialogue, events and shops
 - 🐔 Animals and pets
 - 🎣 Fishing, then the mines and combat
-- 📜 The other Start menu pages: skills, social, map, crafting, collections and options
-- 🍂 Seasonal map art (maps still show spring)
+- 📜 The other Start menu pages: the map, crafting and collections
+- 🚀 More speed for big farms: drawing many sprites faster, then fewer drops drawn (Options > System > Item Drops)
 - 🌐 Hosting a farm from a 3DS, plus Steam/GOG invite codes
 - 🧩 Long term: mod support (Content Patcher and friends)
 
@@ -210,10 +260,10 @@ After that:
 | **Y** | Use the held tool. Hold it to keep swinging, or to charge an upgraded tool. Holding seeds: plant them. At the shipping bin: throw the held item in. A ripe crop in front of you is picked first. |
 | **L / R** | Previous / next item in the toolbar |
 | **Start** | Open the menu (tabs on the touch screen) |
-| **ZR** *(New 3DS)* | Cycle the zoom 1x / 2x / 3x (on any model: Options > Zoom Level) |
-| **Touch screen** | Hotbar, item details (tap the item's name), zoom, menus |
+| **Touch screen** | Hotbar, item details (tap the item's name), quick buttons, menus |
 | X | +1 hour (single player, for testing) |
-| ZL *(New 3DS)* | Toggle the fast CPU mode (for testing) |
+
+The zoom (1x / 2x / 3x) is in **Options > Zoom Level**, and the New 3DS's fast CPU is in **Options > System**.
 
 In menus, the D-pad or Circle Pad moves and **A** chooses, or you can tap. **B** goes back.
 
@@ -360,7 +410,7 @@ Tips:
 
 - **Networking:** finding the farm, joining, staying connected, changing
   locations, and going to bed together.
-- **Performance:** stutters, long pauses or input delay. Say where you were and what was happening.
+- **Performance:** the frame rate where you play, stutters, long pauses or input delay. Say where you were, what was happening, and your **Options > System** settings.
 - **Your setup:** the **exact console model** (original or New), the host
   platform, device and game version, your network, the number of players and
   how long you played.
@@ -420,8 +470,11 @@ farm as usual, including your farmhand.
 
 <details><summary><b>Does it run on an original 3DS?</b></summary>
 
-Yes. The original models are the baseline it's built for. New models get extra
-speed. Please report how it runs on yours.
+Yes. The original models are the baseline it's built for, and 0.0.4 made big
+farms much faster on them ([Performance](#performance)): towns run at 60 fps and
+a big year-9 farm at 30. **Options > System** has Frame Rate and Fish Pond Shadows
+to trade looks for speed. New models get extra speed. Please report how it runs
+on yours.
 </details>
 
 <details><summary><b>Does it work with mods?</b></summary>
