@@ -205,7 +205,7 @@ ponds, 194 trees, over 1,000 grass tufts), standing still for 30 seconds:
 | Bus Stop | 15 fps | **60 fps** |
 | Town | 45 fps or less | **58-60 fps** |
 | The big farm | 4-8 fps | **30 fps** |
-| The host repainting a building | a stutter on every colour change | **no stutter** (each repaint ~5 ms instead of ~55 ms) |
+| The host repainting a building | a stutter on every color change | **no stutter** (each repaint ~5 ms instead of ~55 ms) |
 
 On a **New 3DS / New 2DS XL** with Fast CPU on, the same farm went from 40-60 fps to **58-60 fps**.
 
@@ -218,7 +218,7 @@ turned off, which runs the original 3DS's processor speed. If you own an origina
 - **Trees, grass and crops** were all updated three times a frame, even standing still. Now only the trees and anything swaying are, as on PC.
 - **The processor and the graphics chip** took turns each frame. The game now updates while the last frame is still being drawn.
 - **Fish ponds** moved every fish and checked it against every other fish. The number of fish shadows is now a setting (below).
-- **Buildings:** any change to one (a repaint, a pond's fish) re-read all of them. Now only the one that changed is. Repainting also works out each colour once instead of once per pixel, with the same result as PC.
+- **Buildings:** any change to one (a repaint, a pond's fish) re-read all of them. Now only the one that changed is. Repainting also works out each color once instead of once per pixel, with the same result as PC.
 
 **Options > System** (new):
 
